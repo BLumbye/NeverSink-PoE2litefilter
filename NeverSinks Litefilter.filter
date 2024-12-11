@@ -1,7 +1,7 @@
 #===============================================================================================================
 # NeverSink's Indepth Loot Filter - for Path of Exile
 #===============================================================================================================
-# VERSION:  0.1.1
+# VERSION:  0.1.1a
 # AUTHOR:   NeverSink
 #
 # This is a mini-filter designed for early PoE2 EA gameplay. I will eventually replace it with a full-fledged filter
@@ -108,9 +108,9 @@ SetBorderColor 0 240 190
 SetFontSize 40
 PlayEffect Cyan Temp
 
-# Special B Tier - Any Runes and Charms
+# Special B Tier - Any Runes
 Show 
-BaseType " Rune" " Charm"
+BaseType " Rune"
 SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
@@ -260,6 +260,29 @@ SetBorderColor 0 0 200
 SetFontSize 35
 
 #--------------------------
+# BLumbye Extras
+#--------------------------
+# Highlight specific bases worth slamming
+Show
+BaseType "Expert Dualstring Bow" "Expert Cultist Bow" "Expert Gothic Quarterstaff" "Expert Crescent Quarterstaff" "Expert Long Quarterstaff" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Crumbling Maul" "Expert Cultist Greathammer"
+SetBorderColor 255 255 255 255
+SetFontSize 40
+
+# Highlight the best gloves, boots and helmet bases
+Show
+Class "Gloves" "Boots" "Helmet"
+DropLevel >= 75
+SetBorderColor 255 255 255 255
+SetFontSize 40
+
+# Higlight some of the better body armours
+Show
+Class "Body Armour"
+DropLevel >= 65
+SetBorderColor 255 255 255 255
+SetFontSize 40
+
+#--------------------------
 # OPTIONAL RULES
 #--------------------------
 # TO ENABLE RULES, REMOVE THE # AT THE START OF THE LINE
@@ -274,12 +297,13 @@ SetFontSize 35
 
 ### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
 
-# Show
-# Rarity <= Magic
-# Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
-# AreaLevel >= 65
-# DropLevel <= 50
-# SetBackgroundColor 0 0 0 125
+Show
+Rarity <= Magic
+Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+AreaLevel >= 65
+DropLevel <= 50
+SetBackgroundColor 0 0 0 125
+SetFontSize 20
 
 #--------------------------
 # Meta
